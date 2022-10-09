@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('./img/programador-1-scaled.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+}
+
+.container{
+    margin: auto;
+    margin-top: 50px;
+    width: 500px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+
+    /* glass effect */
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.title img{
+    width: 50px;
+}
+
+form{
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+input{
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+button{
+    background-color: rgb(67, 128, 219);
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0px 5px 0px;
+    color: white;
+    cursor: pointer;
+}
+
+ul{
+    text-align: center;
+    list-style: none;
+    font-size: 25px;
+}
+
+.hidden{
+    text-decoration: line-through;
+}
