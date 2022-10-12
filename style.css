@@ -1,29 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;1,400;1,500;1,900&display=swap');
+
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    background-image: url('./img/programador-1-scaled.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    background-image: url('./img/Animated\ Shape.svg');
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container{
-    margin: auto;
-    margin-top: 50px;
-    width: 500px;
-    padding: 25px;
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    padding: 26px;
+    margin: 50px auto;
+    gap: 15px;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
 
 
-    /* glass effect */
+    /* glass */
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.75);
@@ -31,47 +31,49 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
-.title{
+.formulario{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.title img{
-    width: 50px;
+    gap: 50px;
 }
 
 form{
-    text-align: center;
-    font-size: 25px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    width: 100%;
 }
 
-input{
-    outline: none;
+
+form input{
     padding: 8px;
+    outline: none;
     border-radius: 5px;
 }
 
+.col1{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.col2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 button{
-    background-color: rgb(67, 128, 219);
     padding: 8px;
+    width: 250px;
     border: none;
-    border-radius: 5px 0px 5px 0px;
+    background-color: rgb(54, 116, 231);
     color: white;
+    font-family: 'Roboto', sans-serif;
     cursor: pointer;
+    margin-top: 15px;
 }
 
-ul{
-    text-align: center;
-    list-style: none;
-    font-size: 25px;
+button:hover{
+    opacity: 0.8;
 }
 
-.hidden{
-    text-decoration: line-through;
-}

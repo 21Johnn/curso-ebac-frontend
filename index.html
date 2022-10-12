@@ -4,31 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio plugins Jquery</title>
 
-    <link rel="stylesheet" href="/style.css">
-    <title>Lista de tarefas</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="title">
-            <img src="./img/webinar.png" alt="">
-            <h1>LISTA DE TAREFAS</h1>
-        </div>
-        <div class="insert">
-            <form action="">
-                <label for="tarefa">Nome da tarefa</label>
-                <input type="text" name="tarefa" placeholder="Insira o nome da tarefa" id="new-item">
-                <button type="submit">ADD +</button>
-            </form>
-        </div>
-        <div class="lista">
-            <ul id="lista-tarefas">
-            </ul>
-        </div>
-    </div>
+     <div class="container">
+         <h1>Formulário de Cadastro</h1>
+         <form action="">
+             <div class="formulario">
+             <div class="col1">
+             <label for="nome">Nome Completo</label>
+             <input type="text" name="nome" id="nome">
+             <label for="email">Email</label>
+             <input type="email" id="email" name="email">
+             <label for="celular">Telefone Celular</label>
+             <input type="tel" name="celular" id="celular">
 
+             <label for="cpf">CPF</label>
+             <input type="tel" name="cpf" id="cpf">
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script src="/main.js"></script>
+            <div class="col2">
+             
+             <label for="rua">Rua</label>
+             <input type="text" name="rua" id="rua">
+
+             <label for="bairro">Bairro</label>
+             <input type="text" name="bairro" id="bairro">
+
+             <label for="cidade">Cidade</label>
+             <input type="text" name="cidade" id="cidade">
+
+             <label for="cep">CEP</label>
+             <input type="text" name="cep" id="cep">
+            </div>  
+        </div>    
+            
+            <button type="submit">Enviar</button>            
+         </form>
+
+     </div>  
 </body>
 </html>
