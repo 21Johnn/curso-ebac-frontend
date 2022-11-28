@@ -1,0 +1,13 @@
+{
+  "name":"grunt.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "grunt": "grunt",
+    "test" : "echo\"Error: no test specified\" && exit 1",
+  },
+  "devDependencies": {
+    "grunt": "^1.5.3"
+  }
+}
