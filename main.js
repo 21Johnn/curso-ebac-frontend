@@ -1,24 +1,49 @@
-document.addEventListener('DOMContentLoaded', function(){
-    const avatar = document.getElementById('avatar');
-    const profileName = document.getElementById('profileName');
-    const userName = document.getElementById('userName');
-    const repositorios = document.getElementById('rep');
-    const follower = document.getElementById('follower');
-    const follow = document.getElementById('follow');
-    const link = document.getElementById('link');
+class Animal {
+    constructor(nome, cor, idade) {
+        this.nome = nome;
+        this.cor = cor;
+        this.idade = idade;
+    }
+    
+    comer() {
+        console.log(`O animal ${this.nome} está comendo.`);
+    }
+    
+    dormir() {
+        console.log(`O animal ${this.nome} está dormindo.`);
+    }
+}
 
-    fetch('https://api.github.com/users/21Johnn')
-    .then(function(resposta){
-        return resposta.json();
-       
-    })   
-    .then(function(json){
-        avatar.src = json.avatar_url;
-        profileName.innerText = json.name;
-        userName.innerText = '@' + json.login;
-        repositorios.innerText = json.public_repos;
-        follower.innerText = json.followers;
-        follow.innerText = json.following;
-        link.href = json.html_url;
-    })
-})
+class Mamifero extends Animal {
+    constructor(nome, cor, idade, pelo) {
+        super(nome, cor, idade);
+        this.pelo = pelo;
+    }
+
+    amamentar() {
+        console.log(`O mamífero ${this.nome} está amamentando.`);
+    }
+
+    correr() {
+        console.log(`O mamífero ${this.nome} está correndo.`);
+    }
+}
+
+class Ave extends Animal {
+    constructor(nome, cor, idade, bico) {
+        super(nome, cor, idade);
+        this.bico = bico;
+    }
+
+    voar() {
+        console.log(`A ave ${this.nome} está voando.`);
+    }
+
+    piar() {
+        console.log(`A ave ${this.nome} está piando.`);
+    }
+}
+
+const mamifero1 = new Mamifero("Leão", "amarelo", 5, "curto");
+const ave1 = new Ave("Pássaro", "vermelho", 2, "curto");
+const ave2 = new Ave("Papagaio", "verde", 10, "grande");
