@@ -1,49 +1,15 @@
-class Animal {
-    constructor(nome, cor, idade) {
-        this.nome = nome;
-        this.cor = cor;
-        this.idade = idade;
-    }
-    
-    comer() {
-        console.log(`O animal ${this.nome} está comendo.`);
-    }
-    
-    dormir() {
-        console.log(`O animal ${this.nome} está dormindo.`);
-    }
+const alunos = [
+    { aluno: 'Lucas', nota: 3 },
+    { aluno: 'Saraiva', nota: 9.0 },
+    { aluno: 'Pedro', nota: 6 },
+    { aluno: 'Julia', nota: 10.0 },
+    { aluno: 'Leandro', nota: 9.9 },
+    { aluno: 'John', nota: 5.5 }
+];
+
+function alunosAprovados(arr) {
+    const aprovados = arr.filter(obj => obj.nota >= 6);
+    return aprovados.map(obj => obj.aluno);
 }
 
-class Mamifero extends Animal {
-    constructor(nome, cor, idade, pelo) {
-        super(nome, cor, idade);
-        this.pelo = pelo;
-    }
-
-    amamentar() {
-        console.log(`O mamífero ${this.nome} está amamentando.`);
-    }
-
-    correr() {
-        console.log(`O mamífero ${this.nome} está correndo.`);
-    }
-}
-
-class Ave extends Animal {
-    constructor(nome, cor, idade, bico) {
-        super(nome, cor, idade);
-        this.bico = bico;
-    }
-
-    voar() {
-        console.log(`A ave ${this.nome} está voando.`);
-    }
-
-    piar() {
-        console.log(`A ave ${this.nome} está piando.`);
-    }
-}
-
-const mamifero1 = new Mamifero("Leão", "amarelo", 5, "curto");
-const ave1 = new Ave("Pássaro", "vermelho", 2, "curto");
-const ave2 = new Ave("Papagaio", "verde", 10, "grande");
+console.log(alunosAprovados(alunos))
